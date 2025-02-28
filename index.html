@@ -1,75 +1,105 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Coba Frieren</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Frieren</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
-
-
-    <script type="text/javascript" src="script.js"></script> 
-
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header id="atas">
-        <div class="wrapper"
+        <div class="wrapper">
             <h1 class="logo">
                 <a href="#">Himmel</a>
             </h1>
             <nav>
                 <ul id="navigasi">
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#Portofolio">Portofolio</a></li>  
-                    <li><a href="#About Me">About Me</a></li> 
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portofolio">Portofolio</a></li>
+                    <li><a href="#about-me">About Me</a></li>
                 </ul>
             </nav>
         </div>
     </header>  
-    
-    <section id="banner"><a name="home"></a>
-        <div class="wrapper">
-        <h2>Himmel</h2>
-        <p class="subtitle">Gading Putra Priyanto</p> 
-        <div class="button">
-            <a href="#" class="glow-on-hover">Explore Now </a>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="overlay">
+            <div class="hero-content">
+                <h1>Selamat Datang di Himmel</h1>
+                <p>Temukan kreativitas tanpa batas di sini.</p>
+                <a href="#about-me" class="btn">Pelajari Lebih Lanjut</a>
+            </div>
         </div>
     </section>
 
-    <section class="portofolio-section"><a name="portofolio"></a>
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="wrapper">
+            <h2>Himmel</h2>
+            <p class="subtitle">Gading Putra Priyanto</p>
+            <div class="button">
+                <a href="#" class="glow-on-hover">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section fade-in-up">
+        <div class="wrapper">
+            <h1>"Orang-orang hidup untuk dikenang."</h1>
+            <p>- Frieren</p>
+        </div>
+    </section>
+
+    <!-- Portofolio Section -->
+    <section id="portofolio" class="portofolio-section fade-in-up">
         <h3>Portofolio</h3>
-            <p class="subtitle">My Project</p>
-            <ul class="portfolio-list"> 
-                <li class="item">
-                        <a href="Img/project-2.png" class="photo-overlay">
-                        <img src="Img/project-2.png" alt="">
-                         </a>
-                <h3>Project 1</h3>
-                    <p>Ini Adalah Project Pertamaku ^^.</p>
-                        <a href="https://dexpie.github.io/valencwi/" class="btn" target="_blank">Lihat Project</a>
-                 </li>
+        <p class="subtitle">My Project</p>
+        <ul class="portfolio-list"> 
             <li class="item">
-                        <a href="Img/project-1.png" class="photo-overlay">
-                         <img src="Img/project-1.png" alt="">
-                        </a>
+                <a href="Img/project-2.png" class="photo-overlay">
+                    <img src="Img/project-2.png" alt="Project 1">
+                </a>
+                <h3>Project 1</h3>
+                <p>Ini Adalah Project Pertamaku ^^.</p>
+                <a href="https://dexpie.github.io/valencwi/" class="btn" target="_blank">Lihat Project</a>
+            </li>
+            <li class="item">
+                <a href="Img/project-1.png" class="photo-overlay">
+                    <img src="Img/project-1.png" alt="Project 2">
+                </a>
                 <h3>Project 2</h3>
-                    <p>Ini Adalah Website Pertamaku ^^.</p>
-                        <a href="https://dexpie.github.io/webcwikai/" class="btn" target="_blank">Lihat Project</a>
+                <p>Ini Adalah Website Pertamaku ^^.</p>
+                <a href="https://dexpie.github.io/webcwikai/" class="btn" target="_blank">Lihat Project</a>
             </li>
             <li class="item">
                 <a href="Img/project-3.png" class="photo-overlay">
-                 <img src="Img/project-3.png" alt="">
+                    <img src="Img/project-3.png" alt="Project 3">
                 </a>
-        <h3>Project 3</h3>
-            <p>Ini Adalah Project Valentine Ke-2 ^^.</p>
+                <h3>Project 3</h3>
+                <p>Ini Adalah Project Valentine Ke-2 ^^.</p>
                 <a href="https://dexpie.github.io/project/valen2/" class="btn" target="_blank">Lihat Project</a>
-    </li>
+            </li>
         </ul>
     </section>
-     <footer>
-         <div class="wrapper"> 
-             <p>© Gading Frieren 2025</p>
+
+    <!-- About Me Section -->
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Saya Adalah Mahasiswa Sarjana Departemen Sistem Informasi ITS 2024. Saya Sangat Tertarik Dalam Web Development. Saya Juga Suka Frieren -cwikai.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper"> 
+            <p>© Gading Frieren 2025</p>
         </div> 
-     </footer>
+    </footer>
+
+    <!-- Link ke External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
