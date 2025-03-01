@@ -14,4 +14,58 @@ document.addEventListener("DOMContentLoaded", function() {
     elements.forEach(element => {
         element.classList.add('aos-animate');
     });
+
+    // Inisialisasi AOS (Animate On Scroll)
+    AOS.init();
 });
+
+// Mengubah teks quote setiap 10 detik dengan kutipan dari Frieren dan Himmel
+const quotes = [
+    '"Orang-orang hidup untuk dikenang." - Frieren',
+    '"Aku ingin tahu apa yang akan aku lakukan jika aku bisa merasakan waktu yang lebih lama." - Frieren',
+    '"Hidup ini adalah perjalanan, bukan tentang mencapai tujuan." - Frieren',
+    '"Terkadang, hal terbaik yang bisa kita lakukan adalah menikmati perjalanan itu, bukan hanya fokus pada akhir." - Himmel',
+    '"Kekuatan sejati bukanlah tentang berapa banyak yang kita miliki, tapi bagaimana kita menghadapinya." - Frieren',
+    '"Kenangan adalah apa yang tetap hidup setelah kita pergi." - Himmel',
+    '"Apa yang lebih penting daripada pencapaian adalah siapa yang kita temui di sepanjang perjalanan." - Frieren',
+    '"Hidup adalah sesuatu yang berharga, tetapi kita harus menyadari bahwa itu bisa cepat berlalu." - Frieren',
+    '"Keindahan hidup adalah dalam hubungan yang kita bangun, bukan dalam waktu yang kita miliki." - Himmel',
+    '"Aku mungkin tidak akan bisa menyelesaikan semua hal, tapi aku ingin mencoba." - Frieren'
+];
+
+let currentQuoteIndex = 0;
+const quoteElement = document.querySelector('.quote-section h1');
+
+// Fungsi untuk mengubah quote
+function changeQuote() {
+    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length; // Menghitung index berikutnya
+    quoteElement.textContent = quotes[currentQuoteIndex];  // Mengubah teks pada elemen
+}
+
+// Mengubah quote setiap 10 detik
+setInterval(changeQuote, 10000); // 10000ms = 10 detik
+
+// Mengubah quote saat halaman dimuat pertama kali
+changeQuote();
+
+// Menambahkan event listener pada tombol untuk switch dark mode
+const toggleButton = document.getElementById('dark-mode-toggle');
+
+// Mengecek apakah pengguna sebelumnya memilih dark mode
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+}
+
+// Fungsi untuk toggle dark mode
+if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        
+        // Menyimpan preferensi pengguna di localStorage
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+}
