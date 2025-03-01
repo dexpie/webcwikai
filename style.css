@@ -9,7 +9,7 @@ body {
 }
 
 .wrapper {
-    width: 80%;
+    width: 90%; /* Membuat wrapper lebih fleksibel */
     margin: 0 auto;
 }
 
@@ -36,19 +36,89 @@ a {
     color: white;
 }
 
+/* Modifikasi Navigasi agar berada di tengah */
 #navigasi {
-    text-align: right;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 #navigasi li {
     display: inline;
-    margin-left: 20px;
+    margin: 0 20px; /* Jarak antar link */
 }
 
 #navigasi li a {
     color: white;
     font-size: 1.2rem;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px; /* Menambahkan ruang di bawah teks untuk garis */
 }
+
+/* Menambahkan garis putih di bawah saat hover */
+#navigasi li a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Tombol Switch Dark Mode */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 200; /* Menjaga tombol tetap di atas konten lainnya */
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.2);
+}
+
+.dark-mode-toggle i {
+    font-size: 2rem; /* Ukuran ikon */
+}
+
+/* Dark Mode Style */
+body.dark-mode {
+    background-color: #121212; /* Latar belakang gelap */
+    color: #e0e0e0; /* Warna teks terang */
+}
+
+body.dark-mode header, 
+body.dark-mode footer, 
+body.dark-mode #hero, 
+body.dark-mode #banner, 
+body.dark-mode .quote-section, 
+body.dark-mode #portofolio, 
+body.dark-mode #about-me {
+    background-color: #333; /* Warna latar belakang area lain di dark mode */
+}
+
+/* Mengubah warna tombol pada dark mode */
+body.dark-mode .btn {
+    background-color: #ffcc00;
+    color: black;
+}
+
+body.dark-mode .social-links a {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode .social-links a:hover {
+    background-color: #666;
+}
+
+/* Menambahkan efek transisi saat dark mode diterapkan */
+body, header, footer, section {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 /* Hero Section */
 #hero {
@@ -92,7 +162,6 @@ a {
     border-radius: 5px;
 }
 
-
 /* Banner Section */
 #banner {
     text-align: center;
@@ -121,27 +190,7 @@ a {
     transform: scale(1.1);
 }
 
-/* Quote Section */
-.quote-section {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 50px 20px;
-    border-radius: 10px;
-}
-
-.quote-section h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-.quote-section p {
-    font-size: 1.2rem;
-    color: #ccc;
-}
-
-/* Portofolio */
+/* Portfolio Section */
 .portofolio-section {
     text-align: center;
     padding: 50px 20px;
@@ -228,10 +277,240 @@ a {
     color: #333;
 }
 
+/* Quote Section */
+.quote-section {
+    display: flex;               /* Menggunakan Flexbox */
+    flex-direction: column;      /* Menyusun konten secara vertikal */
+    justify-content: center;     /* Memusatkan konten secara vertikal */
+    align-items: center;         /* Memusatkan konten secara horizontal */
+    text-align: center;          /* Memusatkan teks */
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+    height: 400px;               /* Memberikan tinggi agar konten lebih terlihat */
+}
+
+.quote-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.quote-section p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Pengalaman Kepanitiaan Section */
+#pengalaman-kepanitiaan {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#pengalaman-kepanitiaan h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#pengalaman-kepanitiaan p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#pengalaman-kepanitiaan ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#pengalaman-kepanitiaan li {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#pengalaman-kepanitiaan li h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#pengalaman-kepanitiaan li p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+#pengalaman-kepanitiaan li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+
 /* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* Responsif Styles */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 95%; /* Memperbesar wrapper di perangkat kecil */
+    }
+
+    #hero .hero-content h1 {
+        font-size: 2.5rem; /* Mengurangi ukuran font */
+    }
+
+    .portfolio-list {
+        flex-direction: column; /* Menyusun item portfolio secara vertikal */
+        align-items: center;
+    }
+
+    .item {
+        width: 80%;
+        margin-bottom: 20px; /* Menambahkan jarak antar item */
+    }
+
+    .item img {
+        height: 150px; /* Menyesuaikan tinggi gambar */
+    }
+
+    #navigasi {
+        text-align: center; /* Menyusun navigasi secara tengah */
+    }
+
+    #navigasi li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Follow Me Section */
+#social-media {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#social-media h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white; /* Menambahkan warna putih pada h2 */
+}
+
+#social-media p {
+    font-size: 1.2rem;
+    color: white; /* Menambahkan warna putih pada p */
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    display: inline-block;
+    background: #333;
+    color: white;
+    font-size: 1.5rem; /* Ukuran ikon */
+    border-radius: 50%; /* Membuat tombol bulat */
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 40px;  /* Ukuran tombol lebih kecil */
+    height: 40px; /* Ukuran tombol lebih kecil */
+    line-height: 40px; /* Menjaga ikon tetap di tengah secara vertikal */
+}
+
+.social-links a .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem; /* Ukuran ikon */
+}
+
+/* Hover Effect */
+.social-links a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a:hover .icon {
+    color: #ffcc00;
+}
+
+.social-links a:hover span {
+    color: #ffcc00;
+}
+
+/* Spotify Button */
+.social-links .spotify {
+    background-color: #1DB954;
+}
+
+.social-links .spotify:hover {
+    background-color: #1ed760;
+}
+
+/* Twitter Button */
+.social-links .twitter {
+    background-color: #1DA1F2;
+}
+
+.social-links .twitter:hover {
+    background-color: #1c94d3;
+}
+
+/* Instagram Button */
+.social-links .instagram {
+    background-color: #E4405F;
+}
+
+.social-links .instagram:hover {
+    background-color: #d73450;
+}
+
+/* Icon Styling (font-awesome or custom icons) */
+.social-links i {
+    font-size: 1.5rem; /* Ukuran ikon lebih besar */
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Animating the icon for extra interaction */
+.social-links a:hover i {
+    transform: scale(1.2); /* Slightly grow the icon on hover */
+}
+
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem; /* Mengurangi ukuran font lebih kecil */
+    }
+
+    .btn {
+        font-size: 1rem; /* Mengurangi ukuran font untuk tombol */
+    }
+
+    .item {
+        width: 100%; /* Menggunakan lebar penuh */
+    }
+
+    .item img {
+        height: 200px; /* Menyesuaikan gambar di perangkat lebih kecil */
+    }
 }
