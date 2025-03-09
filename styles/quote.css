@@ -1,0 +1,110 @@
+/* Quote Section */
+.quote-section {
+    display: flex;
+    flex-direction: column;
+    /* Menyusun konten secara vertikal */
+    justify-content: center;
+    /* Memusatkan konten secara vertikal */
+    align-items: center;
+    /* Memusatkan konten secara horizontal */
+    text-align: center;
+    /* Memusatkan teks */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    /* Latar belakang gradien yang lebih modern */
+    color: white;
+    padding: 80px 20px;
+    /* Menambah padding untuk ruang yang lebih besar */
+    border-radius: 15px;
+    height: 450px;
+    /* Menambah tinggi untuk ruang yang lebih nyaman */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    /* Bayangan lebih besar untuk efek kedalaman */
+    margin-top: 40px;
+    /* Menambah jarak dari bagian lain */
+    transition: all 0.3s ease-in-out;
+    /* Transisi halus untuk perubahan */
+}
+
+/* Efek animasi saat tampil */
+.quote-section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    /* Menambahkan animasi masuk */
+}
+
+/* Animasi masuk untuk Quote Section */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-section h1 {
+    font-size: 3rem;
+    /* Ukuran font lebih besar untuk kesan lebih menonjol */
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Teks lebih tegas */
+    letter-spacing: 2px;
+    /* Jarak antar huruf lebih luas */
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+    /* Efek bayangan lebih tajam dan lebih besar */
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+/* Efek hover untuk judul */
+.quote-section h1:hover {
+    color: #ffcc00;
+    /* Ganti warna judul saat hover */
+    transform: scale(1.05);
+    /* Efek zoom saat hover */
+}
+
+/* Teks kutipan */
+.quote-section p {
+    font-size: 1.5rem;
+    /* Ukuran font sedikit lebih besar */
+    color: #e0e0e0;
+    /* Warna lebih terang untuk teks kutipan */
+    margin-top: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Efek Hover untuk Quote Section */
+.quote-section:hover {
+    background: rgba(0, 0, 0, 0.9);
+    /* Menggelapkan latar belakang saat hover */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    /* Bayangan lebih besar saat hover */
+    transform: scale(1.02);
+    /* Sedikit perbesar saat hover */
+}
+
+/* Responsif untuk Quote Section */
+@media (max-width: 768px) {
+    .quote-section {
+        padding: 50px 20px;
+        height: auto;
+    }
+
+    .quote-section h1 {
+        font-size: 2rem;
+        /* Menyesuaikan ukuran font di layar kecil */
+    }
+
+    .quote-section p {
+        font-size: 1.2rem;
+        /* Menyesuaikan ukuran font kutipan */
+    }
+}

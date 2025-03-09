@@ -1,0 +1,114 @@
+/* Header */
+#atas {
+    background: rgba(0, 0, 0, 0.8);
+    /* Gelapkan latar belakang sedikit untuk kontras yang lebih baik */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Tambahkan bayangan untuk efek kedalaman */
+    transition: background 0.3s ease;
+    /* Animasi perubahan latar belakang */
+}
+
+/* Logo */
+#atas .logo a {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    /* Ganti warna logo dengan warna cerah agar lebih menarik */
+    font-weight: 600;
+    text-transform: uppercase;
+    /* Membuat logo lebih tegas */
+    letter-spacing: 2px;
+    /* Jarak antar huruf agar lebih modern */
+    transition: color 0.3s ease;
+}
+
+#atas .logo a:hover {
+    color: #fff;
+    /* Ubah warna logo saat hover */
+}
+
+/* Navigasi */
+#navigasi {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* Menyusun item secara horizontal */
+    align-items: center;
+    gap: 40px;
+}
+
+#navigasi li {
+    display: inline;
+    list-style: none;
+}
+
+#navigasi li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efek Hover Navigasi */
+#navigasi li a:hover {
+    color: #ffcc00;
+    /* Ubah warna teks saat hover */
+    transform: scale(1.1);
+    /* Efek zoom in untuk menarik perhatian */
+    border-bottom: 2px solid #ffcc00;
+    /* Menambahkan garis bawah berwarna saat hover */
+}
+
+/* Tombol Switch Dark Mode */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 200;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.3);
+    /* Membesar sedikit saat hover */
+    color: #ffcc00;
+    /* Mengubah warna ikon saat hover */
+}
+
+/* Gaya ikon Dark Mode */
+.dark-mode-toggle i {
+    font-size: 2rem;
+    /* Ukuran ikon */
+}
+
+/* Responsif Header */
+@media (max-width: 768px) {
+    #atas {
+        padding: 10px 0;
+    }
+
+    #navigasi {
+        gap: 20px;
+        /* Mengurangi jarak antar link di perangkat kecil */
+    }
+
+    #navigasi li a {
+        font-size: 1rem;
+    }
+}

@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Menambahkan efek fade-in saat elemen muncul
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll('.fade-in-up');
     elements.forEach(element => {
         element.classList.add('aos-animate');
@@ -60,7 +60,7 @@ if (localStorage.getItem('dark-mode') === 'enabled') {
 if (toggleButton) {
     toggleButton.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
-        
+
         // Menyimpan preferensi pengguna di localStorage
         if (document.body.classList.contains('dark-mode')) {
             localStorage.setItem('dark-mode', 'enabled');
@@ -69,3 +69,48 @@ if (toggleButton) {
         }
     });
 }
+
+// Menambahkan tooltip untuk setiap item di Tech Stack
+const techItems = document.querySelectorAll('.tech-item');
+
+techItems.forEach(item => {
+    item.addEventListener('mouseenter', function () {
+        const techName = item.querySelector('p').textContent;
+        const tooltip = document.createElement('span');
+        tooltip.classList.add('tooltip');
+        tooltip.textContent = `Teknologi: ${techName}`;
+        item.appendChild(tooltip);
+    });
+
+    item.addEventListener('mouseleave', function () {
+        const tooltip = item.querySelector('.tooltip');
+        if (tooltip) tooltip.remove();
+    });
+});
+
+// Filter Projects
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        // Toggle active class for buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        portfolioItems.forEach(item => {
+            if (filter === 'all') {
+                item.style.display = 'block';
+            } else if (item.classList.contains(filter)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+
+// loading.js - Mengatur tampilan loading screen
+

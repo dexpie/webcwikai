@@ -1,0 +1,51 @@
+/* Responsif Styles */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    #hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .portfolio-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .item img {
+        height: 150px;
+    }
+
+    #navigasi {
+        text-align: center;
+    }
+
+    #navigasi li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .item img {
+        height: 200px;
+    }
+}

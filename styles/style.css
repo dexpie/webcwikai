@@ -1,0 +1,12 @@
+/* Mengimpor file CSS lainnya */
+@import url('header.css');
+@import url('about.css');
+@import url('portfolio.css');
+@import url('techstack.css');
+@import url('footer.css');
+@import url('darkmode.css');
+@import url('responsive.css');
+@import url('hero.css');
+@import url('banner.css');
+@import url('quote.css');
+/* Mengimpor file CSS Quote */

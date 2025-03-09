@@ -1,0 +1,15 @@
+/* About Me Section */
+#about-me {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#about-me h2 {
+    font-size: 2rem;
+}
+
+#about-me p {
+    font-size: 1.2rem;
+    color: #333;
+}

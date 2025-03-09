@@ -1,0 +1,65 @@
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    /* Hero section akan mengambil tinggi penuh layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    /* Agar tidak tertutup oleh header */
+    background-image: url('https://images4.alphacoders.com/135/thumb-1920-1356514.png');
+    /* Gambar latar belakang */
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Overlay untuk membuat teks lebih terbaca */
+#hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Membuat latar belakang lebih gelap */
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    /* Ukuran font yang besar untuk headline */
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.hero-content .btn {
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background: #ff9900;
+}
